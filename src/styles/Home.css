@@ -1,0 +1,31 @@
+/* styles/Home.css */
+.home-section {
+  height: 100vh;
+  background-image: url('/images/verdant1.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  padding: 0 20px;
+  position: relative;
+}
+
+.home-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5); /* optional dark overlay */
+  z-index: 0;
+}
+
+.home-content {
+  position: relative;
+  z-index: 1;
+}

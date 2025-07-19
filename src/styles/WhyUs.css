@@ -1,0 +1,47 @@
+.whyus-section {
+  padding: 80px 20px;
+  background-color: #f5fdf5;
+  text-align: center;
+}
+
+.whyus-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.whyus-section h2 {
+  font-size: 32px;
+  color: #2b572b;
+  margin-bottom: 50px;
+}
+
+.whyus-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.whyus-card {
+  background-color: #ffffff;
+  padding: 25px 20px;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whyus-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.whyus-card h3 {
+  font-size: 20px;
+  color: #2b572b;
+  margin-bottom: 10px;
+}
+
+.whyus-card p {
+  font-size: 15px;
+  color: #444;
+  line-height: 1.6;
+}
