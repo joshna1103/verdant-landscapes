@@ -22,7 +22,7 @@ const InfoBar = () => {
       </div>
       <div className="info-item">
         <a
-          href="https://www.instagram.com/verdantlandscapes" // 🔁 replace with actual link
+          href="https://www.instagram.com/verdant_landscapes_gardening/" // 🔁 replace with actual link
           target="_blank"
           rel="noopener noreferrer"
           className="insta-link"

@@ -12,12 +12,16 @@ const About = () => {
 
 From carefully curated gardens to expansive landscapes, our services reflect our commitment to quality, creativity, and sustainability. We blend aesthetics with functionality, ensuring that your outdoors are not just beautiful—but also alive, welcoming, and easy to maintain.
           </p>
+          <strong>We have successfully executed a large-scale lawn production project spanning 20 acres of land , showcasing our expertise in delivering sustainable and high-quality landscaping solutions.</strong>
           <p>
             Our mission is simple: to nurture nature while delivering dependable, professional, and personalized services. Whether it’s a home garden, commercial space, or a large estate, Verdant brings your outdoor dreams to life—leaf by leaf, stone by stone.
           </p>
         </div>
         <div className="about-image" data-aos="fade-left">
-          <img src="/images/about.jpg" alt="About Verdant Landscaping" />
+          <div className="about-image">
+  <img src="/images/about.jpg" alt="About Verdant Landscaping" className="about-img" />
+</div>
+
         </div>
       </div>
     </section>

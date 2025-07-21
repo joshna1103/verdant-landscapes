@@ -59,14 +59,15 @@ const Contact = () => {
 
           <div className="map-wrapper">
             <iframe
-              title="Verdant Landscaping Location"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.356539284976!2d78.54609337503012!3d17.441338302453477!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9bc7d938defd%3A0x74148e37fd5a5ff3!2sSainikpuri%2C%20Secunderabad%2C%20Telangana%20500094!5e0!3m2!1sen!2sin!4v1721382105249!5m2!1sen!2sin"
-              width="100%"
-              height="200"
-              style={{ border: 0 }}
-              allowFullScreen=""
-              loading="lazy"
-            ></iframe>
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.896591872557!2d78.5453987!3d17.4827843!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTfCsDI4JzU4LjAiTiA3OMKwMzInNTIuNyJF!5e0!3m2!1sen!2sin!4v1721469842332!5m2!1sen!2sin"
+          width="100%"
+          height="450"
+          style={{ border: 0 }}
+          allowFullScreen=""
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          title="Google Map Location"
+        ></iframe>
           </div>
         </div>
       </div>

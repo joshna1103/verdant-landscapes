@@ -7,12 +7,17 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Services from "./components/Services";
 import WhyUs from "./components/WhyUs";
-import Gallery from "./components/Gallery";
-import Reviews from "./components/Reviews"; 
+import Projects from "./components/Projects";
+import Reviews from "./components/Reviews";
 import ReviewForm from "./components/ReviewForm";
 import Contact from "./components/Contact";
+import GoogleForm from "./components/GoogleForm";
 import Footer from "./components/Footer";
-import ScrollToTop from "./components/ScrollToTop";
+import FloatingContact from "./components/FloatingContact";
+// import WhatsAppWidget from "./components/WhatsAppWidget";
+//import ScrollToTop from "./components/ScrollToTop";
+import "@fortawesome/fontawesome-free/css/all.min.css";
+
 
 import "./styles/App.css";
 
@@ -29,12 +34,15 @@ const App = () => {
       <About />
       <Services />
       <WhyUs />
-      <Gallery />
+      <Projects />
       <Reviews />
       <ReviewForm />
       <Contact />
       <Footer />
-      <ScrollToTop />
+      <GoogleForm />
+      <FloatingContact />
+     {/* <WhatsAppWidget /> */}
+     {/* <ScrollToTop /> */}
     </>
   );
 };

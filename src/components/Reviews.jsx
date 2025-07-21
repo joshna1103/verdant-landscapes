@@ -1,67 +1,53 @@
+// src/components/Reviews.jsx
 import React, { useEffect, useState } from "react";
 import { collection, getDocs } from "firebase/firestore";
-import { db } from "../Firebase";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import { db } from "../firebase";
 
-const AllReviews = () => {
+const Reviews = () => {
   const [reviews, setReviews] = useState([]);
 
-  const fetchReviews = async () => {
-    try {
-      const querySnapshot = await getDocs(collection(db, "reviews"));
-      const reviewsData = querySnapshot.docs.map(doc => ({
-        id: doc.id,
-        ...doc.data(),
-      }));
-      setReviews(reviewsData);
-      AOS.refresh(); // Refresh animations after reviews are loaded
-    } catch (error) {
-      console.error("Error fetching reviews:", error);
-    }
-  };
-
   useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: true,
-    });
+    const fetchReviews = async () => {
+      const querySnapshot = await getDocs(collection(db, "Reviews"));
+      const reviewsList = querySnapshot.docs.map((doc) => doc.data());
+      setReviews(reviewsList);
+    };
+
     fetchReviews();
   }, []);
 
   return (
-    <section style={{ padding: "2rem", backgroundColor: "#f3f4f6" }}>
-      <div style={{ maxWidth: "800px", margin: "0 auto", textAlign: "center" }}>
-        <h2 data-aos="zoom-in" style={{ fontSize: "2rem", marginBottom: "2rem" }}>
-          What Our Customers Say
-        </h2>
+    <section className="reviews-section" id="reviews">
+      <h2>Client Reviews</h2>
+      <div className="reviews-container">
+        {reviews.map((review, index) => (
+          <div key={index} className="review-card">
+            <h4>{review.name}</h4>
+            <p>{review.message}</p>
+            <span>⭐ {review.rating}</span>
+            <section className="review-section">
+  <h2>Customer Reviews</h2>
 
-        {reviews.length === 0 ? (
-          <p data-aos="fade-in">No reviews yet.</p>
-        ) : (
-          reviews.map((review, index) => (
-            <div
-              key={review.id}
-              data-aos="fade-up"
-              data-aos-delay={index * 100}
-              style={{
-                border: "1px solid #ddd",
-                borderRadius: "12px",
-                padding: "16px",
-                marginBottom: "20px",
-                backgroundColor: "#ffffff",
-                boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
-                textAlign: "left",
-              }}
-            >
-              <h4 style={{ marginBottom: "8px", color: "#256029" }}>{review.name}</h4>
-              <p style={{ margin: 0, color: "#333" }}>{review.message}</p>
-            </div>
-          ))
-        )}
+  <form className="review-form" onSubmit={handleSubmit}>
+    <input type="text" placeholder="Your Name" required />
+    <textarea placeholder="Your Review" rows="4" required />
+    <button type="submit">Submit Review</button>
+  </form>
+
+  <div className="review-list">
+    <div className="review-card">
+      <div className="star-rating">⭐⭐⭐⭐⭐</div>
+      <h4>John Doe</h4>
+      <p>Wonderful landscaping service! Very professional team.</p>
+    </div>
+  </div>
+</section>
+
+          </div>
+        ))}
       </div>
     </section>
   );
 };
 
-export default AllReviews;
+export default Reviews;

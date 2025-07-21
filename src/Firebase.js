@@ -1,22 +1,17 @@
-// firebase.js
-
+// src/Firebase.js
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
-import { getAnalytics } from "firebase/analytics";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDqso7fVAz32wiF96wTS671cI1DFPamxGc",
-  authDomain: "verdant-aef16.firebaseapp.com",
-  projectId: "verdant-aef16",
-  storageBucket: "verdant-aef16.firebasestorage.app",
-  messagingSenderId: "255508929547",
-  appId: "1:255508929547:web:72c90d3c6d3cb87ca5bb0e",
-  measurementId: "G-L47DWSE8N6"
+  apiKey: "AIzaSyA49WJUF9rXDxrAcb3dbdLV_PYFrC27Pn8",
+  authDomain: "verdant-8273c.firebaseapp.com",
+  projectId: "verdant-8273c",
+  storageBucket: "verdant-8273c.appspot.com",
+  messagingSenderId: "500097818320",
+  appId: "1:500097818320:web:6125a7291870212b9d48d5",
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
-const db = getFirestore(app); // 🔥 Firestore initialization
+const db = getFirestore(app);
 
 export { db };

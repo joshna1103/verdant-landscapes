@@ -5,9 +5,8 @@ const Home = () => {
   return (
     <section className="home-section" id="home">
       <div className="home-content" data-aos="fade-up">
-        <pre><h1>Welcome to Verdant 
-                        
-                        Landscaping and Gardening services.</h1></pre>
+        <h1>Welcome to</h1>
+      <h1>Verdant Landscaping and Gardening services.</h1>
         <p>Verdant — Beauty Rooted in Nature.</p>
       </div>
     </section>

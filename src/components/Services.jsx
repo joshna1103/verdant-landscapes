@@ -43,16 +43,43 @@ const Services = () => {
           <p>Transform your rooftop into a green oasis with our expert setup.</p>
         </div>
         <div className="service-card" data-aos="fade-up" data-aos-delay="900">
-          <h3>Seasonal Cleanup</h3>
-          <p>Pre and post-season cleaning and maintenance services for your garden.</p>
+          <h3>Garden Maintenance</h3>
+          <p>Cleaning and maintenance services for your garden.</p>
         </div>
-        <div className="service-card" data-aos="fade-up" data-aos-delay="1000">
-          <h3>Stone & Pathway Design</h3>
-          <p>Custom stone layouts and paths to beautify your landscape architecture.</p>
-        </div>
+       
         <div className="service-card" data-aos="fade-up" data-aos-delay="1100">
           <h3>Garden Pest Control</h3>
           <p>Organic and safe pest control methods for healthy plant growth.</p>
+        </div>
+      </div>
+
+      {/* ✅ Group Title for Hardscape */}
+      <h2 className="subheading" data-aos="fade-up" data-aos-delay="1150">Hardscape & FRP Services</h2>
+
+      <div className="services-grid">
+        <div className="service-card" data-aos="fade-up" data-aos-delay="1200">
+          <h3>Civil Works</h3>
+          <p>Strong and sustainable civil structures for landscape foundations.</p>
+        </div>
+        <div className="service-card" data-aos="fade-up" data-aos-delay="1300">
+          <h3>Fountains</h3>
+          <p>Beautiful water features and fountain installations to enhance your garden’s elegance.</p>
+        </div>
+        <div className="service-card" data-aos="fade-up" data-aos-delay="1400">
+          <h3>Water Bodies</h3>
+          <p>Design and construction of naturalistic ponds and decorative water bodies.</p>
+        </div>
+        <div className="service-card" data-aos="fade-up" data-aos-delay="1500">
+          <h3>Swimming Pools</h3>
+          <p>Custom swimming pool design and installation for luxury landscaping.</p>
+        </div>
+        <div className="service-card" data-aos="fade-up" data-aos-delay="1600">
+          <h3>Pathways</h3>
+          <p>Sturdy and stylish garden pathways using premium materials and patterns.</p>
+        </div>
+        <div className="service-card" data-aos="fade-up" data-aos-delay="1700">
+          <h3>FRP Plantation</h3>
+          <p>Fiber-reinforced plastic planters for durable, elegant plant setups.</p>
         </div>
       </div>
     </section>
