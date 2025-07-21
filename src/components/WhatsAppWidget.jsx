@@ -5,7 +5,7 @@ import { FaWhatsapp } from "react-icons/fa";
 const WhatsAppWidget = () => {
   return (
     <a
-      href="https://wa.me/919876543210" // Replace with your number
+      href="https://wa.me/917799499466" 
       className="whatsapp-widget"
       target="_blank"
       rel="noopener noreferrer"

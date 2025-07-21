@@ -10,13 +10,13 @@ const FloatingContact = () => {
 
   return (
     <div className="floating-contact">
-      <a href="tel:+919876543210" className="call-now" target="_blank" rel="noopener noreferrer">
+      <a href="tel:+917799499466" className="call-now" target="_blank" rel="noopener noreferrer">
         <FaPhoneAlt className="icon" />
         Call Now
       </a>
 
       <a
-        href="https://wa.me/919876543210"
+        href="https://wa.me/917799499466"
         className="whatsapp"
         target="_blank"
         rel="noopener noreferrer"
