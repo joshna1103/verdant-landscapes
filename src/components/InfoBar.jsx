@@ -12,8 +12,9 @@ const InfoBar = () => {
   return (
     <div className="info-bar" data-aos="fade-down">
       <div className="info-item">
-        <FaPhoneAlt /> <span>+91 7799499466</span>
+        <FaPhoneAlt /> <span>+91 7729941190</span>
       </div>
+      
       <div className="info-item">
         <FaEnvelope /> <span>verdant.projectdesk@gmail.com</span>
       </div>

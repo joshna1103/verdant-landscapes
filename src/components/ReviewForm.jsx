@@ -1,13 +1,20 @@
-import React, { useState } from "react";
+// src/components/ReviewForm.jsx
+import React, { useState, useEffect } from "react";
 import { collection, addDoc } from "firebase/firestore";
-import { db } from "../Firebase";
+import { db, storage } from "../Firebase"; // storage added
+import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 const ReviewForm = () => {
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
+  const [file, setFile] = useState(null);
   const [submitted, setSubmitted] = useState(false);
+
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -17,14 +24,27 @@ const ReviewForm = () => {
     }
 
     try {
+      let fileURL = "";
+
+      // 🔹 If user uploaded a file, save it in Firebase Storage
+      if (file) {
+        const fileRef = ref(storage, `reviews/${Date.now()}_${file.name}`);
+        await uploadBytes(fileRef, file);
+        fileURL = await getDownloadURL(fileRef);
+      }
+
+      // 🔹 Save review + optional file URL in Firestore
       await addDoc(collection(db, "reviews"), {
         name,
         message,
+        fileURL,
         timestamp: new Date(),
       });
+
       setSubmitted(true);
       setName("");
       setMessage("");
+      setFile(null);
     } catch (error) {
       console.error("Error adding review: ", error);
     }
@@ -70,6 +90,16 @@ const ReviewForm = () => {
               }}
             ></textarea>
           </div>
+
+          {/* 🔹 New File Upload Field */}
+          <div style={{ marginBottom: "1rem" }}>
+            <input
+              type="file"
+              accept="image/*"
+              onChange={(e) => setFile(e.target.files[0])}
+            />
+          </div>
+
           <button
             type="submit"
             style={{

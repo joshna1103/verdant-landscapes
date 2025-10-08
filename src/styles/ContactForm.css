@@ -1,0 +1,39 @@
+.project-content {
+  padding: 25px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%; /* makes content stretch evenly */
+}
+
+.project-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+  color: #2e604a;
+  font-weight: 600;
+}
+
+.project-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: auto; /* pushes button down */
+}
+
+.project-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 0.95rem;
+  background: #3a8d5e;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+  margin-top: 20px; /* ensures gap from text */
+}
+
+.project-btn:hover {
+  background: #2e604a;
+  transform: scale(1.05);
+}

@@ -1,32 +1,88 @@
 .navbar {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  background-color: #e6f4ea;
-  padding: 10px 30px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  justify-content: space-between;
+  padding: 10px 40px;
+  background: #f4fdf4;
+  flex-wrap: wrap; /* allows stacking on small screens */
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
 .logo {
-  width: 60px;
-  height: auto;
+  height: 60px;
+}
+
+.brand-text h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #2e7d32; /* deep green */
+}
+
+.brand-text p {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #388e3c;
+}
+
+.brand-text .tagline {
+  display: block;
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #4caf50;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 25px;
+  gap: 20px;
 }
 
-.nav-links li a {
-  text-decoration: none;
-  color: #2e7d32;
+.nav-links li {
+  cursor: pointer;
   font-weight: 500;
-  font-size: 1rem;
-  transition: color 0.3s;
+  color: #2e7d32;
 }
 
-.nav-links li a:hover {
-  color: #1b5e20;
-}
+/* 🔹 Responsive for tablets & mobiles */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+  }
 
+  .navbar-left {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .brand-text h1 {
+    font-size: 1.5rem;
+  }
+
+  .brand-text p {
+    font-size: 0.9rem;
+  }
+
+  .brand-text .tagline {
+    font-size: 0.85rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    margin-top: 10px;
+    gap: 12px;
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
